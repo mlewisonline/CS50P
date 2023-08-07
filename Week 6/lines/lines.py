@@ -2,17 +2,18 @@ import sys
 
 def main():
     if len(sys.argv) < 2:
-        print("Too few command-line arguments")
-    elif len(sys.argv) == 2:
+        sys.exit("Too few command-line arguments")
+    elif len(sys.argv) > 2:
+        sys.exit("Too many command-line arguments")
+    else:
         if sys.argv[1].endswith('.py'):
            # Process the Python file
            file = read_file(sys.argv[1])
            num_lines =get_lines_code_count(file)
-           print(num_lines)         
+           print(num_lines)
         else:
-            print("Not a Python file")
-    else:
-        print("Too many command-line arguments")
+            sys.exit("Not a Python file")
+
 
 def read_file(filename):
     try:
@@ -20,15 +21,15 @@ def read_file(filename):
             file = f.readlines()
             return file
     except IOError:
-            print("File not found")
+            sys.exit("File not found")
 
 def get_lines_code_count(file):
     num_lines = 0
     for line in file:
-        if line.startswith('#') or line.isspace():
+        if line.lstrip().startswith('#') or line.isspace():
             pass
         else:
-            num_lines += 1 
+            num_lines += 1
     return num_lines
 
 
