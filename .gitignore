@@ -1,0 +1,3 @@
+.vscode
+.pytest*
+__psycache__
