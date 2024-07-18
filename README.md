@@ -1,5 +1,5 @@
 # CS50’s Introduction to Programming with Python
-[![Certificate](./static/CS50P-A4.png)](https://certificates.cs50.io/021d895f-964f-4fe1-9d89-7a93e4141510.png?size=A4)
+[![Certificate](CS50P.png)](https://certificates.cs50.io/021d895f-964f-4fe1-9d89-7a93e4141510.png?size=A4)
 ### These are my solutions for CS50's Introduction to Programming with Python 2023.
 ### Final Project: PasswordX
 <br/>
